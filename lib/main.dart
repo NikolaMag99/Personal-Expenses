@@ -13,9 +13,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Personal Expenses',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        accentColor: Colors.amber,
-      ),
+          primarySwatch: Colors.purple,
+          accentColor: Colors.amber,
+          fontFamily: 'Quicksand',
+          appBarTheme: AppBarTheme(
+            textTheme: ThemeData.light().textTheme.copyWith(
+                    title: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontSize: 20,
+                )),
+          )),
       home: MyHomePage(),
     );
   }
@@ -75,7 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Personal Expenses'),
+        title: Text(
+          'Personal Expenses',
+        ),
         actions: <Widget>[
           IconButton(
             onPressed: () => _startAddNewTransaction(context),

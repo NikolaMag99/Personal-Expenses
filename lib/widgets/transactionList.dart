@@ -39,9 +39,7 @@ class TransactionList extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       transactions[index].title,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                      style: Theme.of(context).textTheme.title,
                       ),
                     ),
                     Text(
